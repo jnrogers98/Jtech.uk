@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About & Contact — JTech</title>
+  <meta name="description" content="Learn about JTech and book a computer repair. Serving Caterham, Reigate, Redhill and surrounding areas." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">JTech</a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services-pricing.html">Services & Pricing</a></li>
+          <li><a href="about-contact.html" class="active">About & Contact</a></li>
+          <li><a href="about-contact.html#contact" class="btn">Book repair</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding:48px 0 32px">
+      <div class="container">
+        <h1>About & Contact</h1>
+        <p>Get to know JTech, and reach out whenever you need help.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container split">
+        <div>
+          <h2>About JTech</h2>
+          <p>We're a small, customer‑first repair shop focused on fast turnarounds and clear communication. Whether it's a slow laptop or a full office setup, we keep things simple and transparent.</p>
+          <ul class="list">
+            <li>Trained and experienced technicians</li>
+            <li>Same‑day appointments when available</li>
+            <li>90‑day workmanship warranty</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 style="margin-top:0">Hours & Area</h3>
+          <p class="muted">Mon–Fri 9:00–6:00, Sat 10:00–3:00</p>
+          <p>Serving: Caterham, Reigate, Redhill + 15 miles</p>
+          <h3>Contact</h3>
+          <p>Email: hello@jtech.example</p>
+          <p>Phone: 07414478412</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Book a repair</h2>
+        <p class="muted">Tell us what's going on. We'll reply with a quick plan and ETA.</p>
+        <div class="split">
+          <form aria-label="Contact form" onsubmit="event.preventDefault(); alert('Thanks! We will contact you shortly.');">
+            <label class="sr-only" for="name">Name</label>
+            <input id="name" name="name" placeholder="Full name" required />
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" placeholder="Email address" type="email" required />
+            <label class="sr-only" for="phone">Phone</label>
+            <input id="phone" name="phone" placeholder="Phone (optional)" />
+            <label class="sr-only" for="details">Issue details</label>
+            <textarea id="details" name="details" placeholder="Describe the problem..." required></textarea>
+            <button class="btn" type="submit">Send request</button>
+          </form>
+          <div class="panel">
+            <h3 style="margin-top:0">Walk‑in</h3>
+            <p>4 Harden Farm Close CR5 1NT</p>
+            <div id="map" style="height:180px;background:#e5e7eb;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#6b7280">Map placeholder</div>
+            <p style="margin-top:12px">Parking available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>© <span id="year"></span> JTech. All rights reserved.</div>
+        <div><a href="#">Privacy</a> · <a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
